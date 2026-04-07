@@ -472,10 +472,12 @@ section {
 }
 
 .step-num {
+    position: relative;
+    z-index: 10;
     width: 56px;
     height: 56px;
     border-radius: 50%;
-    background: white;
+    background: var(--sage-pale);
     border: 1px solid var(--border);
     display: flex;
     align-items: center;
@@ -949,8 +951,27 @@ footer ul li a:hover {
     color: #4a4a47;
 }
 
-/* ── RESPONSIVE ── */
+/* Mobile Navigation Additions */
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--charcoal);
+}
+
+.mobile-only {
+    display: none;
+}
+
 @media (max-width: 900px) {
+    .hamburger {
+        display: block;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
     section {
         padding: 60px 24px;
     }
@@ -960,7 +981,35 @@ footer ul li a:hover {
     }
 
     .nav-links {
-        display: none;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 64px;
+        left: 0;
+        width: 100%;
+        background: rgba(250, 248, 244, 0.98);
+        padding: 24px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
+
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .mobile-only {
+        display: block;
+        margin-top: 16px;
+    }
+
+    .nav-links .mobile-only a {
+        display: inline-block;
+        width: auto;
     }
 
     .hero {

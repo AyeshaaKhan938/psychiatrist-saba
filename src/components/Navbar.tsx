@@ -1,4 +1,10 @@
+'use client';
+
+import { useState } from 'react';
+
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <>
       <div className="topbar">
@@ -10,15 +16,24 @@ export default function Navbar() {
           Dr. Saba Asad
           <span>Psychiatrist &amp; Mental Health Specialist</span>
         </a>
-        <ul className="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#process">How It Works</a></li>
-          <li><a href="#reviews">Reviews</a></li>
-          <li><a href="#pricing">Fees</a></li>
-          <li><a href="#contact">Contact</a></li>
+        
+        <div 
+          className="hamburger" 
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? '✕' : '☰'}
+        </div>
+
+        <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
+          <li><a href="#about" onClick={() => setIsOpen(false)}>About</a></li>
+          <li><a href="#services" onClick={() => setIsOpen(false)}>Services</a></li>
+          <li><a href="#process" onClick={() => setIsOpen(false)}>How It Works</a></li>
+          <li><a href="#reviews" onClick={() => setIsOpen(false)}>Reviews</a></li>
+          <li><a href="#pricing" onClick={() => setIsOpen(false)}>Fees</a></li>
+          <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
+          <li className="mobile-only"><a href="#contact" className="nav-cta" onClick={() => setIsOpen(false)}>Book Session</a></li>
         </ul>
-        <a href="#contact" className="nav-cta">Book Session</a>
+        <a href="#contact" className="nav-cta desktop-only">Book Session</a>
       </nav>
     </>
   );
