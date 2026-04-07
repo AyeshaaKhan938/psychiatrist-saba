@@ -1,6 +1,8 @@
 import { prisma } from '@/lib/prisma';
 import { revalidatePath } from 'next/cache';
 import { deleteReview } from '@/app/actions/review';
+import { deleteBlog } from '@/app/actions/blog';
+import AdminBlogForm from '@/components/AdminBlogForm';
 
 export default async function AdminPage() {
   const bookings = await prisma.booking.findMany({
@@ -9,6 +11,10 @@ export default async function AdminPage() {
 
   const reviews = await prisma.review.findMany({
     orderBy: { createdAt: 'desc' },
+  });
+
+  const blogs = await prisma.blog.findMany({
+    orderBy: { createdAt: 'desc' }
   });
 
   return (
@@ -115,6 +121,48 @@ export default async function AdminPage() {
             </tbody>
           </table>
         </div>
+
+        <div className="flex items-center justify-between mt-16 mb-6">
+           <h2 className="text-2xl font-serif text-gray-800" style={{ fontFamily: 'Cormorant Garamond, serif' }}>Articles & Insights</h2>
+        </div>
+        <AdminBlogForm />
+
+        {blogs.length > 0 && (
+          <div className="bg-white rounded-lg shadow overflow-hidden mt-8">
+            <table className="w-full text-left border-collapse">
+              <thead>
+                <tr className="bg-gray-100 border-b border-gray-200">
+                  <th className="p-4 text-sm font-semibold text-gray-600">Date</th>
+                  <th className="p-4 text-sm font-semibold text-gray-600">Title</th>
+                  <th className="p-4 text-sm font-semibold text-gray-600 text-right">Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                {blogs.map((blog: any) => {
+                  const delBlogAction = deleteBlog.bind(null, blog.id) as any;
+                  return (
+                    <tr key={blog.id} className="border-b border-gray-200 hover:bg-gray-50">
+                      <td className="p-4 text-sm text-gray-600">
+                        {blog.createdAt.toLocaleDateString()}
+                      </td>
+                      <td className="p-4">
+                        <p className="font-medium text-gray-800">{blog.title}</p>
+                        <a href={`/blogs/${blog.slug}`} target="_blank" rel="noreferrer" className="text-xs text-blue-500 hover:text-blue-700 underline mt-1 block">View Article ↗</a>
+                      </td>
+                      <td className="p-4 text-right">
+                        <form action={delBlogAction}>
+                          <button type="submit" className="text-red-500 hover:text-red-700 text-sm font-medium px-3 py-1 bg-red-50 hover:bg-red-100 rounded transition-colors">
+                            Delete
+                          </button>
+                        </form>
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        )}
       </div>
     </div>
   );
