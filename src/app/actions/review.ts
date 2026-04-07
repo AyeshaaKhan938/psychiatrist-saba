@@ -38,3 +38,16 @@ export async function submitReview(prevState: any, formData: FormData) {
     return { error: 'An error occurred while submitting your review. Please try again.' };
   }
 }
+
+export async function deleteReview(id: string) {
+  try {
+    await prisma.review.delete({
+      where: { id },
+    });
+    revalidatePath('/admin');
+    revalidatePath('/');
+    return { success: true };
+  } catch (error) {
+    return { error: 'Failed to delete review' };
+  }
+}
