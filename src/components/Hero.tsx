@@ -2,7 +2,7 @@ export default function Hero() {
   return (
     <section className="hero" style={{ padding: 0 }}>
       <div className="hero-text">
-        <p className="hero-eyebrow">Licensed Clinical Psychologist · Lahore, Pakistan</p>
+        <p className="hero-eyebrow">Clinical Psychologist · Lahore, Pakistan</p>
         <h1>
           Heal your<br />
           <em>mind.</em><br />
@@ -13,7 +13,7 @@ export default function Hero() {
           all aspects of mental wellbeing — in-person and online across Pakistan.
         </p>
         <div className="hero-badges">
-          <span className="badge">🎓 MSc ADCP</span>
+          <span className="badge">🎓 MSc, ADCP</span>
           <span className="badge">✦ 10+ Years Experience</span>
           <span className="badge">💬 Urdu &amp; English</span>
         </div>
