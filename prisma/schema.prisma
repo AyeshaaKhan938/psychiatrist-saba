@@ -29,3 +29,14 @@ model Review {
   status    String   @default("approved")
   createdAt DateTime @default(now())
 }
+
+model Blog {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  excerpt   String   @default("")
+  content   String
+  imageUrl  String?
+  published Boolean  @default(true)
+  createdAt DateTime @default(now())
+}

@@ -30,6 +30,7 @@ export default function Navbar() {
           <li><a href="#process" onClick={() => setIsOpen(false)}>How It Works</a></li>
           <li><a href="#reviews" onClick={() => setIsOpen(false)}>Reviews</a></li>
           <li><a href="#pricing" onClick={() => setIsOpen(false)}>Fees</a></li>
+          <li><a href="#blogs" onClick={() => setIsOpen(false)}>Articles</a></li>
           <li><a href="#contact" onClick={() => setIsOpen(false)}>Contact</a></li>
           <li className="mobile-only"><a href="#contact" className="nav-cta" onClick={() => setIsOpen(false)}>Book Session</a></li>
         </ul>

@@ -6,6 +6,7 @@ import Process from '@/components/Process';
 import Reviews from '@/components/Reviews';
 import Pricing from '@/components/Pricing';
 import Contact from '@/components/Contact';
+import Blogs from '@/components/Blogs';
 import Footer from '@/components/Footer';
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
       <Process />
       <Reviews />
       <Pricing />
+      <Blogs />
       <Contact />
       <Footer />
     </>
