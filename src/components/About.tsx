@@ -14,7 +14,7 @@ export default function About() {
           <p className="section-eyebrow">About Dr. Saba Asad</p>
           <h2 className="section-title">Science, <em>compassion</em>, and genuine care</h2>
           <p className="section-body">
-            Dr. Saba Asad is a qualified psychiatrist with over a decade of clinical experience helping
+            Dr. Saba Asad is a qualified clinical psychologist with over a decade of clinical experience helping
             individuals overcome mental health challenges. She combines the latest evidence-based treatments
             with a deeply human approach — creating a safe space where patients feel truly heard.
           </p>
@@ -27,8 +27,8 @@ export default function About() {
             <div className="cred-item">
               <div className="cred-icon">🎓</div>
               <div className="cred-text">
-                <strong>MBBS · FCPS (Psychiatry)</strong>
-                <span>Board-certified psychiatrist, Pakistan Medical Commission</span>
+                <strong>MSc ADCP</strong>
+                <span>Licensed clinical psychologist</span>
               </div>
             </div>
             <div className="cred-item">

@@ -6,7 +6,7 @@ export default function Footer() {
           <a href="#" className="nav-logo"
             style={{ color: '#b8d4b4', fontSize: '20px', textDecoration: 'none', fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Dr.
             Saba Asad</a>
-          <p>Board-certified psychiatrist offering compassionate, evidence-based mental health care in Lahore and
+          <p>Licensed clinical psychologist offering compassionate, evidence-based mental health care in Lahore and
             online across Pakistan.</p>
         </div>
         <div>

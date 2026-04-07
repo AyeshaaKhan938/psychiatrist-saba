@@ -19,7 +19,7 @@ export default function Reviews() {
         </div>
         <div className="testimonial-card">
           <p className="stars">★★★★★</p>
-          <p className="testimonial-text">I was sceptical about psychiatry but Dr. Asad&apos;s approach is so
+          <p className="testimonial-text">I was sceptical about therapy but Dr. Asad&apos;s approach is so
             evidence-based and warm. She explained my condition clearly and my depression is now completely
             manageable.</p>
           <div className="testimonial-author">

@@ -1065,3 +1065,58 @@ footer ul li a:hover {
         margin-top: 16px;
     }
 }
+
+/* ── UI POLISH & MICRO-ANIMATIONS ── */
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.hero-text {
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+.hero-image {
+    animation: fadeInUp 0.8s ease 0.2s backwards;
+}
+
+.service-card, .testimonial-card, .pricing-card:not(.featured) {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.testimonial-card:hover, .pricing-card:not(.featured):hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+}
+
+.pricing-card.featured {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card.featured:hover {
+    transform: scale(1.06) translateY(-5px) !important;
+    box-shadow: 0 15px 40px rgba(74, 103, 65, 0.25) !important;
+}
+
+.btn-primary, .btn-white, .btn-submit, .nav-cta, .btn-price {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-primary:hover, .btn-submit:hover, .nav-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(74, 103, 65, 0.3);
+}
+
+.btn-white:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn-price:hover {
+    transform: translateY(-2px);
+}

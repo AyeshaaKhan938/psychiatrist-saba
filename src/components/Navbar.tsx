@@ -14,7 +14,7 @@ export default function Navbar() {
       <nav>
         <a href="#" className="nav-logo">
           Dr. Saba Asad
-          <span>Psychiatrist &amp; Mental Health Specialist</span>
+          <span>Clinical Psychologist &amp; Mental Health Specialist</span>
         </a>
         
         <div 

@@ -13,7 +13,7 @@ export default function Pricing() {
             <p className="pricing-period">Per session · 60 minutes</p>
             <hr className="pricing-divider" />
             <ul className="pricing-features">
-              <li>Comprehensive psychiatric assessment</li>
+              <li>Comprehensive psychological assessment</li>
               <li>Full mental health history review</li>
               <li>Diagnosis &amp; treatment discussion</li>
               <li>Personalised plan overview</li>
