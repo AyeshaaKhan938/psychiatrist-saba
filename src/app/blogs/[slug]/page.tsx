@@ -26,13 +26,11 @@ export default async function BlogPostPage({ params }: { params: { slug: string 
               {blog.excerpt}
             </p>
           )}
-          {blog.imageUrl && (
-            <img 
-              src={blog.imageUrl} 
-              alt={blog.title} 
-              className="w-full h-auto rounded-md mb-12 object-cover max-h-[450px]" 
-            />
-          )}
+          <img 
+            src={blog.imageUrl || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80'} 
+            alt={blog.title} 
+            className="w-full h-auto rounded-md mb-12 object-cover max-h-[450px]" 
+          />
           <div className="prose prose-lg prose-headings:font-serif prose-headings:text-[#2c2c2a] prose-p:text-gray-700 prose-p:leading-relaxed max-w-none break-words" style={{ whiteSpace: 'pre-wrap' }}>
             {blog.content}
           </div>

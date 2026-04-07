@@ -20,8 +20,8 @@ export default async function Blogs() {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '32px', marginTop: '56px' }}>
           {latestBlogs.map((blog: any) => (
             <div key={blog.id} style={{ border: '0.5px solid var(--border)', borderRadius: '4px', overflow: 'hidden' }}>
-              <div style={{ background: 'var(--sage-pale)', height: '200px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--sage)' }}>
-                 {blog.imageUrl ? <img src={blog.imageUrl} alt={blog.title} style={{ width: '100%', height: '100%', objectFit: 'cover'}} /> : 'Article Image'}
+              <div style={{ background: 'var(--sage-pale)', height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--sage)', overflow: 'hidden' }}>
+                 <img src={blog.imageUrl || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80'} alt={blog.title} style={{ width: '100%', height: '100%', objectFit: 'cover'}} />
               </div>
               <div style={{ padding: '24px' }}>
                 <p style={{ fontSize: '11px', color: 'var(--muted)', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '8px' }}>
