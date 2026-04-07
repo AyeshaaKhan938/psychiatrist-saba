@@ -19,8 +19,8 @@ export default function About() {
             with a deeply human approach — creating a safe space where patients feel truly heard.
           </p>
           <p className="section-body" style={{ marginTop: '16px' }}>
-            Having trained at leading medical institutions in Pakistan, Dr. Asad specializes in anxiety,
-            depression, OCD, PTSD, bipolar disorder, and more. She sees patients in Lahore and conducts online
+            Having trained at leading institutions in Pakistan, Dr. Asad specializes in anxiety,
+            depression, OCD, PTSD, bipolar disorder, and more. She sees patients in Lahore, Gujranwala and conducts online
             consultations nationwide.
           </p>
           <div className="cred-list">
