@@ -28,7 +28,7 @@ export default function About() {
               <div className="cred-icon">🎓</div>
               <div className="cred-text">
                 <strong>MSc, ADCP</strong>
-                <span>Clinical psychologist</span>
+                <span>Clinical Psychologist</span>
               </div>
             </div>
             <div className="cred-item">
