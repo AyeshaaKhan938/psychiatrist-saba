@@ -6,7 +6,7 @@ export default function Footer() {
           <a href="#" className="nav-logo"
             style={{ color: '#b8d4b4', fontSize: '20px', textDecoration: 'none', fontFamily: "'Cormorant Garamond', serif", fontWeight: 600 }}>Dr.
             Saba Asad</a>
-          <p>Clinical Psychologist offering compassionate, evidence-based mental health care in Lahore and
+          <p>Clinical Psychologist offering compassionate, evidence-based mental health care in Lahore, Gujranwala and
             online across Pakistan.</p>
         </div>
         <div>
@@ -22,7 +22,7 @@ export default function Footer() {
         <div>
           <h5>Navigate</h5>
           <ul>
-            <li><a href="#about">About Dr. Asad</a></li>
+            <li><a href="#about">About Dr. Saba Asad</a></li>
             <li><a href="#process">How It Works</a></li>
             <li><a href="#reviews">Patient Reviews</a></li>
             <li><a href="#pricing">Fees</a></li>

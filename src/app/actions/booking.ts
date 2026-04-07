@@ -27,7 +27,7 @@ export async function submitBooking(prevState: any, formData: FormData) {
       },
     });
 
-    return { success: true, message: 'Thank you! Dr. Asad will contact you within 24 hours.' };
+    return { success: true, message: 'Thank you! Dr. Saba Asad will contact you within 24 hours.' };
   } catch (error) {
     console.error('Booking submission error:', error);
     return { error: 'Failed to submit booking. Please try again later.' };

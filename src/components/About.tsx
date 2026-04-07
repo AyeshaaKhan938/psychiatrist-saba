@@ -19,7 +19,7 @@ export default function About() {
             with a deeply human approach — creating a safe space where patients feel truly heard.
           </p>
           <p className="section-body" style={{ marginTop: '16px' }}>
-            Having trained at leading institutions in Pakistan, Dr. Asad specializes in anxiety,
+            Having trained at leading institutions in Pakistan, Dr. Saba Asad specializes in anxiety,
             depression, OCD, PTSD, bipolar disorder, and more. She sees patients in Lahore, Gujranwala and conducts online
             consultations nationwide.
           </p>
@@ -35,7 +35,7 @@ export default function About() {
               <div className="cred-icon">🏥</div>
               <div className="cred-text">
                 <strong>10+ Years Clinical Experience</strong>
-                <span>Hospital &amp; private practice, Lahore</span>
+                <span>Hospital &amp; private practice, Lahore, Gujranwala</span>
               </div>
             </div>
             <div className="cred-item">

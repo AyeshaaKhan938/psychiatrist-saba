@@ -19,7 +19,7 @@ export default function Reviews() {
         </div>
         <div className="testimonial-card">
           <p className="stars">★★★★★</p>
-          <p className="testimonial-text">I was sceptical about therapy but Dr. Asad&apos;s approach is so
+          <p className="testimonial-text">I was sceptical about therapy but Dr. Saba Asad&apos;s approach is so
             evidence-based and warm. She explained my condition clearly and my depression is now completely
             manageable.</p>
           <div className="testimonial-author">
@@ -32,7 +32,7 @@ export default function Reviews() {
         </div>
         <div className="testimonial-card">
           <p className="stars">★★★★★</p>
-          <p className="testimonial-text">My OCD had taken over my life. Dr. Asad&apos;s ERP therapy was transformational.
+          <p className="testimonial-text">My OCD had taken over my life. Dr. Saba Asad&apos;s ERP therapy was transformational.
             Six months later, I have my life back. I cannot recommend her highly enough.</p>
           <div className="testimonial-author">
             <div className="author-avatar">SR</div>

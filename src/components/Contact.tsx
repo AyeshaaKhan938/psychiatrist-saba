@@ -2,6 +2,7 @@
 
 import { useActionState, useEffect, useRef } from 'react';
 import { submitBooking } from '@/app/actions/booking';
+import toast from 'react-hot-toast';
 
 export default function Contact() {
   const [state, formAction, isPending] = useActionState(submitBooking, null);
@@ -9,10 +10,10 @@ export default function Contact() {
 
   useEffect(() => {
     if (state?.success) {
-      alert(state.message);
+      toast.success(state.message);
       formRef.current?.reset();
     } else if (state?.error) {
-      alert(state.error);
+      toast.error(state.error);
     }
   }, [state]);
 

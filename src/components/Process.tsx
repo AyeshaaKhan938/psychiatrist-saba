@@ -13,7 +13,7 @@ export default function Process() {
         <div className="process-step">
           <div className="step-num">2</div>
           <h4>Personalised Plan</h4>
-          <p>Dr. Asad creates a tailored treatment plan — which may include therapy, medication, or both —
+          <p>Dr. Saba Asad creates a tailored treatment plan — which may include therapy, medication, or both —
             specific to your needs.</p>
         </div>
         <div className="process-step">
