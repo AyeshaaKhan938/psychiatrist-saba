@@ -19,9 +19,11 @@ export default function About() {
             with a deeply human approach — creating a safe space where patients feel truly heard.
           </p>
           <p className="section-body" style={{ marginTop: '16px' }}>
-            Having trained at leading institutions in Pakistan, Dr. Saba Asad specializes in anxiety,
-            depression, OCD, PTSD, bipolar disorder, and more. She sees patients in Lahore, Gujranwala and conducts online
-            consultations nationwide.
+            Having trained at leading institutions of Pakistan, Dr. Saba Asad specializes in anxiety, depression,
+            panic attacks, OCD, PTSD, bipolar disorder, mood disorders, couple counselling, diabetes education,
+            pre- and post-marital training programs, pre- and postnatal depression, personality grooming, career
+            counselling, parenting training programs, and confidence building programs. She sees patients in Lahore,
+            Gujranwala and conducts online consultations.
           </p>
           <div className="cred-list">
             <div className="cred-item">

@@ -1,11 +1,17 @@
+import type { Blog } from '@prisma/client';
 import { prisma } from '@/lib/prisma';
 
 export default async function Blogs() {
-  const latestBlogs = await prisma.blog.findMany({
-    where: { published: true },
-    orderBy: { createdAt: 'desc' },
-    take: 3,
-  });
+  let latestBlogs: Blog[] = [];
+  try {
+    latestBlogs = await prisma.blog.findMany({
+      where: { published: true },
+      orderBy: { createdAt: 'desc' },
+      take: 3,
+    });
+  } catch {
+    // DB unreachable — same empty state as no published posts
+  }
 
   return (
     <section id="blogs" style={{ background: 'white' }}>
@@ -18,7 +24,7 @@ export default async function Blogs() {
         </p>
       ) : (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(300px, 1fr))', gap: '32px', marginTop: '56px' }}>
-          {latestBlogs.map((blog: any) => (
+          {latestBlogs.map((blog) => (
             <div key={blog.id} style={{ border: '0.5px solid var(--border)', borderRadius: '4px', overflow: 'hidden' }}>
               <div style={{ background: 'var(--sage-pale)', height: '220px', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--sage)', overflow: 'hidden' }}>
                  <img src={blog.imageUrl || 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=800&q=80'} alt={blog.title} style={{ width: '100%', height: '100%', objectFit: 'cover'}} />

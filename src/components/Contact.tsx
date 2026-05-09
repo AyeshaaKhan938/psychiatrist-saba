@@ -46,14 +46,27 @@ export default function Contact() {
               <div className="contact-icon">🕐</div>
               <div>
                 <strong>Working Hours</strong>
-                <p>Mon – Sat: 10am – 7pm<br />Online sessions available evenings</p>
+                <p>
+                  <strong>Abdul Ghani Hospital, Lahore</strong>
+                  <br />
+                  Wednesday &amp; Friday · 7pm – 9pm
+                  <br />
+                  <br />
+                  <strong>Gujranwala Medical Complex</strong>
+                  <br />
+                  Every Saturday · 3pm – 6pm
+                </p>
               </div>
             </div>
             <div className="contact-info-item">
               <div className="contact-icon">💻</div>
               <div>
                 <strong>Online Sessions</strong>
-                <p>Available across all of Pakistan via WhatsApp / Zoom</p>
+                <p>
+                  Available across all of Pakistan via WhatsApp / Zoom
+                  <br />
+                  Mon – Sat: 10am – 7pm
+                </p>
               </div>
             </div>
           </div>

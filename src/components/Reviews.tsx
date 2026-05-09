@@ -1,3 +1,4 @@
+import type { Review } from '@prisma/client';
 import { prisma } from '@/lib/prisma';
 import ReviewForm from './ReviewForm';
 
@@ -26,13 +27,18 @@ const staticReviews = [
 ];
 
 export default async function Reviews() {
-  const dbReviewsRaw = await prisma.review.findMany({
-    where: { status: 'approved' },
-    orderBy: { createdAt: 'desc' },
-    take: 6,
-  });
+  let dbReviewsRaw: Review[] = [];
+  try {
+    dbReviewsRaw = await prisma.review.findMany({
+      where: { status: 'approved' },
+      orderBy: { createdAt: 'desc' },
+      take: 6,
+    });
+  } catch {
+    // Neon paused, wrong DATABASE_URL, or offline — show static testimonials only
+  }
 
-  const dbReviews = dbReviewsRaw.map((r: any) => ({
+  const dbReviews = dbReviewsRaw.map((r) => ({
     rating: r.rating,
     comment: r.comment,
     initials: r.name.substring(0, 2).toUpperCase(),
