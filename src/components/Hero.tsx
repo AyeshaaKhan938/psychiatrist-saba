@@ -23,7 +23,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="hero-image">
-        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=900&q=80&fit=crop&crop=top"
+        <img src="/images/doctor-saba.png"
           alt="Dr. Saba Asad - Clinical Psychologist" />
         <div className="hero-image-overlay"></div>
         <div className="hero-stat-box">
