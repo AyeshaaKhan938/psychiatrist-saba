@@ -6,6 +6,11 @@ export const metadata: Metadata = {
   description: "Clinical Psychologist in Lahore, Gujranwala, Pakistan offering in-person and online therapy sessions.",
 };
 
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
+};
+
 import { Toaster } from 'react-hot-toast';
 
 export default function RootLayout({

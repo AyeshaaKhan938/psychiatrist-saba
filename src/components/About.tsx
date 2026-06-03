@@ -3,8 +3,8 @@ export default function About() {
     <section id="about" style={{ background: 'var(--warm-white)' }}>
       <div className="about-grid">
         <div className="about-image">
-          <img src="/images/doctor-saba.png"
-            alt="Dr. Saba Asad seated at her desk" />
+          <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=700&q=80&fit=crop&crop=top"
+            alt="Dr. Saba Asad" />
           <div className="about-quote">
             <p>&quot;Mental health is not a destination, but a journey. I walk that path with every patient.&quot;</p>
             <cite>— Dr. Saba Asad</cite>
